@@ -22,5 +22,6 @@
         <br/><br/>
         Result of executing task <c:out value="${taskExecuted}"/>:<br/>
         <b><c:out value="${result}"/></b></c:if>
+        <%-- TODO: Add c:forEach usage somewhere --%>
     </body>
 </html>
