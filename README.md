@@ -74,7 +74,6 @@ request.setAttribute("user", user); // Передача об'єкта на JSP-�
 На JSP-сторінці використовуйте EL для отримання даних з JavaBean та їх відображення. Наприклад:
 
 ```jsp
-Copy code
 <body>
     <h1>Welcome ${user.username}</h1>
     <p>Your age is ${user.age}</p>
