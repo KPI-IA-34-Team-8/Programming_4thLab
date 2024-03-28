@@ -1,20 +1,22 @@
 package kpi.team8_5.fourthlab.lab10;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class MovieDatabase {
-    private ArrayList<Actor> actors;
-    private ArrayList<Movie> movies;
-    public MovieDatabase(ArrayList<Actor> actors, ArrayList<Movie> movies) {
+    private List<Actor> actors;
+    private List<Movie> movies;
+    public MovieDatabase(List<Actor> actors, List<Movie> movies) {
         this.actors = new ArrayList<Actor>(actors);
         this.movies = new ArrayList<Movie>(movies);
     }
-    public ArrayList<Actor> getActors() {
-        return new ArrayList<>(actors);
+    public List<Actor> getActors() {
+        return new ArrayList<Actor>(actors);
     }
 
-    public ArrayList<Movie> getMovies() {
-        return new ArrayList<>(movies);
+    public List<Movie> getMovies() {
+        return new ArrayList<Movie>(movies);
     }
     public void addActor(Actor actor) throws IllegalArgumentException {
         if (actor == null) {

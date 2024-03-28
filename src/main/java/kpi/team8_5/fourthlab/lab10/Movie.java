@@ -1,16 +1,18 @@
 package kpi.team8_5.fourthlab.lab10;
 
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Movie {
     private final String name;
-    private final ArrayList<String> actors;
-    public Movie(String name, ArrayList<String> actors) {
+    private final List<String> actors;
+    public Movie(String name, List<String> actors) {
         this.name = name;
         this.actors = new ArrayList<>(actors);
     }
 
-    public ArrayList<String> getActors() {
+    public List<String> getActors() {
         return new ArrayList<>(this.actors);
     }
 

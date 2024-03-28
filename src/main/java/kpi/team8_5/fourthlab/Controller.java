@@ -15,15 +15,6 @@ public class Controller extends HttpServlet {
     private ArrayList<Movie> movies = new ArrayList<Movie>();
     private MovieDatabase movieDatabase;
     public void init() {
-        actors.add(new Actor("Tom Hanks", new ArrayList<String>(List.of("Forrest Gump", "Saving Private Ryan"))));
-        actors.add(new Actor("Julia Roberts", new ArrayList<String>(List.of("Pretty Woman", "Erin Brockovich"))));
-        actors.add(new Actor("Leonardo DiCaprio", new ArrayList<String>(List.of("Titanic", "Inception"))));
-        movies.add(new Movie("Forrest Gump", new ArrayList<String>(List.of("Tom Hanks", "Robin Wright",
-                "Gary Sinise", "Sally Field"))));
-        movies.add(new Movie("Pretty Woman", new ArrayList<String>(List.of("Julia Roberts", "Richard Gere"))));
-        movies.add(new Movie("Titanic", new ArrayList<String>(List.of("Tom Hanks", "Kate Winslet",
-                "Billy Zane"))));
-        movieDatabase = new MovieDatabase(actors, movies);
     }
 
 
@@ -44,7 +35,7 @@ public class Controller extends HttpServlet {
                 }
                 break;
             case "2":
-                ArrayList<String> resultList = Task2.Execute(movieDatabase, task2Extra);
+                List<String> resultList = Task2.Execute(movieDatabase, task2Extra);
                 if (resultList.isEmpty()) result = "Nobody has ever played with the actor " + task2Extra;
                 else result = "The actors that have played with the actor " + task2Extra + " are the following: " + String.join(", ", resultList);
                 break;

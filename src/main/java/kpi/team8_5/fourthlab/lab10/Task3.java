@@ -12,7 +12,7 @@ public class Task3 {
             Movie movie = i.next();
 
             //Find a film the most amount of actors was staring in
-            ArrayList<String> names = movie.getActors();
+            List<String> names = movie.getActors();
             if(names.size() > actor_count){
                 actor_count = names.size();
                 popular_movie_name = movie.getName();

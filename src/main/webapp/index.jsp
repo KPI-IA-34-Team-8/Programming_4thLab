@@ -1,9 +1,13 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%--God, you don't realize how long it took me to install this stupid lib with IntelliJ :sob:--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="kpi.team8_5.fourthlab.MovieDatabaseImplementation" %>
+<%@ page import="kpi.team8_5.fourthlab.lab10.Actor" %>
+<%@ page import="kpi.team8_5.fourthlab.lab10.Movie" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <title>JSP - Hello World</title>
     </head>
     <body>
@@ -22,6 +26,13 @@
         <br/><br/>
         Result of executing task <c:out value="${taskExecuted}"/>:<br/>
         <b><c:out value="${result}"/></b></c:if>
-        <%-- TODO: Add c:forEach usage somewhere --%>
+
+        <h1>List of Actors</h1>
+        <c:forEach var="actor" items="${MovieDatabaseImplementation.getDatabase().getActors()}"><p><c:out value="${actor.getName()}"/></p>
+        </c:forEach>
+        <br/>
+        <h1>List of Movies</h1>
+        <c:forEach var="movie" items="${MovieDatabaseImplementation.getDatabase().getMovies()}"><p><c:out value="${movie.getName()}"/></p>
+        </c:forEach>
     </body>
 </html>
